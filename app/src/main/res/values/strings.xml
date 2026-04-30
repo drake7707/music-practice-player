@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Music Practice Player</string>
+
+    <!-- Track info -->
+    <string name="no_file_loaded">No file loaded</string>
+    <string name="open_file">Open File</string>
+
+    <!-- Transport -->
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="seek_backward">Seek Back 10s</string>
+    <string name="seek_forward">Seek Forward 10s</string>
+    <string name="return_to_start">Return to Start</string>
+
+    <!-- Loop -->
+    <string name="loop_section_label">LOOP</string>
+    <string name="set_loop_start">Set Start [S]</string>
+    <string name="set_loop_end">Set End [E]</string>
+    <string name="toggle_loop">Loop [L]</string>
+    <string name="loop_start_set">Loop start set</string>
+    <string name="loop_end_set">Loop end set and activated</string>
+
+    <!-- Speed -->
+    <string name="speed_label">SPEED</string>
+    <string name="minus">−</string>
+    <string name="plus">+</string>
+
+    <!-- Errors / Messages -->
+    <string name="permission_denied">Storage permission is required to open audio files.</string>
+    <string name="error_load_file">Could not open the audio file. Please try another file.</string>
+
+    <!-- Keyboard hints -->
+    <string name="keyboard_hints">Space: Play/Pause · PgUp/PgDn: Seek · S: Loop Start · E: Loop End · L: Toggle Loop · +/−: Speed · R: Return</string>
+</resources>
