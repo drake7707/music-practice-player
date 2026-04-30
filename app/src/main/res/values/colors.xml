@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand -->
+    <color name="accent">#2196F3</color>
+    <color name="accent_dark">#1565C0</color>
+    <color name="on_accent">#FFFFFF</color>
+
+    <!-- Backgrounds -->
+    <color name="background">#121212</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="surface_variant">#2C2C2C</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+
+    <!-- Loop -->
+    <color name="loop_region_fill">#2196F3</color>
+    <color name="loop_tick">#64B5F6</color>
+    <color name="loop_button_active">#1565C0</color>
+    <color name="loop_button_inactive">#2C2C2C</color>
+
+    <!-- Status bar -->
+    <color name="status_bar">#0D0D0D</color>
+</resources>
