@@ -5,6 +5,7 @@ import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.media.PlaybackParams;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
@@ -43,7 +44,14 @@ public class PlaybackController {
     private int loopEndMs = 0;
 
     /** True while a seekTo() call is in progress (seek completes asynchronously). */
-    private boolean isSeeking = false;
+    private volatile boolean isSeeking = false;
+    /**
+     * The position (ms) that was last requested via seekTo(), or -1 when no seek is pending.
+     * Used to display a stable position in the UI while the async seek is in flight, avoiding
+     * the visible "jump backwards" caused by getCurrentPosition() returning a stale or
+     * keyframe-snapped value mid-seek.
+     */
+    private volatile int pendingSeekPositionMs = -1;
 
     private float playbackSpeed = SPEED_DEFAULT;
 
@@ -102,6 +110,7 @@ public class PlaybackController {
             mediaPlayer.setDataSource(context, uri);
             mediaPlayer.setOnSeekCompleteListener(mp -> {
                 isSeeking = false;
+                pendingSeekPositionMs = -1;
             });
             mediaPlayer.setOnPreparedListener(mp -> {
                 applyPlaybackSpeed();
@@ -207,12 +216,23 @@ public class PlaybackController {
         if (mediaPlayer == null) return;
         try {
             isSeeking = true;
-            mediaPlayer.seekTo(positionMs);
+            pendingSeekPositionMs = positionMs;
+            // API 26+ supports SEEK_CLOSEST which seeks to the exact position rather than
+            // snapping backwards to the nearest sync/keyframe (SEEK_PREVIOUS_SYNC, the default
+            // used by the old single-argument seekTo). On some devices/ROMs (e.g. LineageOS 18)
+            // getCurrentPosition() faithfully reflects that keyframe snap, causing the seekbar
+            // to visibly jump backwards by several seconds.
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                mediaPlayer.seekTo(positionMs, MediaPlayer.SEEK_CLOSEST);
+            } else {
+                mediaPlayer.seekTo(positionMs);
+            }
             if (callbacks != null) {
                 callbacks.onPositionChanged(positionMs);
             }
         } catch (IllegalStateException e) {
             isSeeking = false;
+            pendingSeekPositionMs = -1;
             Log.e(TAG, "Cannot seek", e);
         }
     }
@@ -373,7 +393,13 @@ public class PlaybackController {
     private void updatePosition() {
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             if (callbacks != null) {
-                callbacks.onPositionChanged(mediaPlayer.getCurrentPosition());
+                // While a seek is in flight, getCurrentPosition() may return a stale or
+                // keyframe-snapped value. Report the requested seek position instead so the
+                // seekbar does not jump around visually.
+                int positionMs = (isSeeking && pendingSeekPositionMs >= 0)
+                        ? pendingSeekPositionMs
+                        : mediaPlayer.getCurrentPosition();
+                callbacks.onPositionChanged(positionMs);
             }
             mainHandler.postDelayed(positionUpdateRunnable, POSITION_UPDATE_INTERVAL_MS);
         }
@@ -412,5 +438,6 @@ public class PlaybackController {
             mediaPlayer = null;
         }
         isSeeking = false;
+        pendingSeekPositionMs = -1;
     }
 }
