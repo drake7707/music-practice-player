@@ -286,9 +286,15 @@ public class PlaybackController {
     private void applyPlaybackSpeed() {
         if (mediaPlayer == null) return;
         try {
+            boolean wasPlaying = mediaPlayer.isPlaying();
             PlaybackParams params = new PlaybackParams();
             params.setSpeed(playbackSpeed);
             mediaPlayer.setPlaybackParams(params);
+            // On some Android versions setPlaybackParams() resumes a paused player;
+            // restore the previous state if that happened unexpectedly.
+            if (!wasPlaying && mediaPlayer.isPlaying()) {
+                mediaPlayer.pause();
+            }
         } catch (Exception e) {
             Log.e(TAG, "Failed to set playback speed", e);
         }
