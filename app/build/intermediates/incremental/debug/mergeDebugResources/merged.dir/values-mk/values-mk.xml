@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">Избриши го текстот</string>
     <string name="error_a11y_label">Грешка: неважечко</string>
     <string name="error_icon_content_description">Грешка</string>
+    <string name="exo_download_completed">Преземањето заврши</string>
+    <string name="exo_download_description">Преземи</string>
+    <string name="exo_download_downloading">Се презема</string>
+    <string name="exo_download_failed">Неуспешно преземање</string>
+    <string name="exo_download_notification_channel_name">Преземања</string>
+    <string name="exo_download_paused">Преземањата се паузирани</string>
+    <string name="exo_download_paused_for_network">Се чека мрежа за преземањата</string>
+    <string name="exo_download_paused_for_wifi">Се чека WiFi за преземањата</string>
+    <string name="exo_download_removing">Се отстрануваат преземањата</string>
     <string name="exposed_dropdown_menu_content_description">Прикажи паѓачко мени</string>
     <string name="icon_content_description">Икона за дијалог</string>
     <string name="item_view_role_description">Картичка</string>

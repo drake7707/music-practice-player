@@ -49,6 +49,15 @@
     <string name="clear_text_end_icon_content_description">Obriši tekst</string>
     <string name="error_a11y_label">Greška: nevežaće</string>
     <string name="error_icon_content_description">Greška</string>
+    <string name="exo_download_completed">Preuzimanje je završeno</string>
+    <string name="exo_download_description">Preuzmi</string>
+    <string name="exo_download_downloading">Preuzimanje</string>
+    <string name="exo_download_failed">Preuzimanje nije uspjelo</string>
+    <string name="exo_download_notification_channel_name">Preuzimanja</string>
+    <string name="exo_download_paused">Preuzimanja su pauzirana</string>
+    <string name="exo_download_paused_for_network">Preuzimanja čekaju povezivanje s mrežom</string>
+    <string name="exo_download_paused_for_wifi">Preuzimanja čekaju WiFi</string>
+    <string name="exo_download_removing">Uklanjanje preuzimanja</string>
     <string name="exposed_dropdown_menu_content_description">Prikaži padajući meni</string>
     <string name="icon_content_description">ikona dijaloškog okvira</string>
     <string name="item_view_role_description">Kartica</string>

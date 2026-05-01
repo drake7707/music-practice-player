@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">清除文字</string>
     <string name="error_a11y_label">錯誤：冇效</string>
     <string name="error_icon_content_description">錯誤</string>
+    <string name="exo_download_completed">下載完畢</string>
+    <string name="exo_download_description">下載</string>
+    <string name="exo_download_downloading">正在下載</string>
+    <string name="exo_download_failed">下載失敗</string>
+    <string name="exo_download_notification_channel_name">下載內容</string>
+    <string name="exo_download_paused">已暫停下載</string>
+    <string name="exo_download_paused_for_network">正在等待網絡連線以下載檔案</string>
+    <string name="exo_download_paused_for_wifi">正在等待 Wi-Fi 連線以下載檔案</string>
+    <string name="exo_download_removing">正在移除下載內容</string>
     <string name="exposed_dropdown_menu_content_description">顯示下拉式選單</string>
     <string name="icon_content_description">對話框圖示</string>
     <string name="item_view_role_description">分頁</string>

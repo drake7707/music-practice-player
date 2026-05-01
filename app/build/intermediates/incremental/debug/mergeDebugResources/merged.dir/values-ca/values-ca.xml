@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">Esborra el text</string>
     <string name="error_a11y_label">Error: no vàlid</string>
     <string name="error_icon_content_description">Error</string>
+    <string name="exo_download_completed">S\'ha completat la baixada</string>
+    <string name="exo_download_description">Baixa</string>
+    <string name="exo_download_downloading">S\'està baixant</string>
+    <string name="exo_download_failed">No s\'ha pogut baixar</string>
+    <string name="exo_download_notification_channel_name">Baixades</string>
+    <string name="exo_download_paused">Les baixades estan en pausa</string>
+    <string name="exo_download_paused_for_network">Les baixades estan esperant una xarxa</string>
+    <string name="exo_download_paused_for_wifi">Les baixades estan esperant una Wi‑Fi</string>
+    <string name="exo_download_removing">S\'estan suprimint les baixades</string>
     <string name="exposed_dropdown_menu_content_description">Mostra el menú desplegable</string>
     <string name="icon_content_description">Icona del quadre de diàleg</string>
     <string name="item_view_role_description">Tabulador</string>

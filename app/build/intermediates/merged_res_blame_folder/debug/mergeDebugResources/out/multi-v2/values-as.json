@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.musicpracticeplayer.app-mergeDebugResources-29:/values-as/values-as.xml",
+            "outputFile": "com.musicpracticeplayer.app-mergeDebugResources-30:/values-as/values-as.xml",
             "map": [
                 {
                     "source": "/home/runner/.gradle/caches/transforms-4/93e53d25a7b0023b97db920e3896f54e/transformed/material-1.12.0/res/values-as/values-as.xml",

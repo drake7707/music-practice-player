@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">Текстти тазалоо</string>
     <string name="error_a11y_label">Ката: жараксыз</string>
     <string name="error_icon_content_description">Ката</string>
+    <string name="exo_download_completed">Жүктөп алуу аяктады</string>
+    <string name="exo_download_description">Жүктөп алуу</string>
+    <string name="exo_download_downloading">Жүктөлүп алынууда</string>
+    <string name="exo_download_failed">Жүктөлүп алынбай калды</string>
+    <string name="exo_download_notification_channel_name">Жүктөлүп алынгандар</string>
+    <string name="exo_download_paused">Жүктөп алуу тындырылды</string>
+    <string name="exo_download_paused_for_network">Тармакка туташуу күтүлүүдө</string>
+    <string name="exo_download_paused_for_wifi">WiFi\'га туташуу күтүлүүдө</string>
+    <string name="exo_download_removing">Жүктөлүп алынгандар өчүрүлүүдө</string>
     <string name="exposed_dropdown_menu_content_description">Түрүлмө менюну көрсөтүү</string>
     <string name="icon_content_description">Диалог сүрөтчөсү</string>
     <string name="item_view_role_description">Өтмөк</string>

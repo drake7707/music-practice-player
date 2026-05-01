@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">پاک کردن نوشتار</string>
     <string name="error_a11y_label">خطا: نامعتبر</string>
     <string name="error_icon_content_description">خطا</string>
+    <string name="exo_download_completed">بارگیری کامل شد</string>
+    <string name="exo_download_description">بارگیری</string>
+    <string name="exo_download_downloading">درحال بارگیری</string>
+    <string name="exo_download_failed">بارگیری نشد</string>
+    <string name="exo_download_notification_channel_name">بارگیری‌ها</string>
+    <string name="exo_download_paused">بارگیری‌ها موقتاً متوقف شد</string>
+    <string name="exo_download_paused_for_network">بارگیری‌ها درانتظار شبکه است</string>
+    <string name="exo_download_paused_for_wifi">بارگیری‌ها در انتظار Wi-Fi است</string>
+    <string name="exo_download_removing">حذف بارگیری‌ها</string>
     <string name="exposed_dropdown_menu_content_description">نمایش منوی کرکره‌ای</string>
     <string name="icon_content_description">نماد کادر گفتگو</string>
     <string name="item_view_role_description">برگه</string>

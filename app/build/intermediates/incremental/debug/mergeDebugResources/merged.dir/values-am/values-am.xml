@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">ጽሑፍን አጽዳ</string>
     <string name="error_a11y_label">ስህተት፦ ልክ ያልሆነ</string>
     <string name="error_icon_content_description">ስህተት</string>
+    <string name="exo_download_completed">ማውረድ ተጠናቋል</string>
+    <string name="exo_download_description">አውርድ</string>
+    <string name="exo_download_downloading">በማውረድ ላይ</string>
+    <string name="exo_download_failed">ማውረድ አልተሳካም</string>
+    <string name="exo_download_notification_channel_name">የወረዱ</string>
+    <string name="exo_download_paused">ውርዶች ባሉበት ቆመዋል</string>
+    <string name="exo_download_paused_for_network">አውታረ መረቦችን በመጠባበቅ ላይ ያሉ ውርዶች</string>
+    <string name="exo_download_paused_for_wifi">WiFiን በመጠባበቅ ላይ ያሉ ውርዶች</string>
+    <string name="exo_download_removing">ውርዶችን በማስወገድ ላይ</string>
     <string name="exposed_dropdown_menu_content_description">ተቆልቋይ ምናሌን አሳይ</string>
     <string name="icon_content_description">የንግግር አዶ</string>
     <string name="item_view_role_description">ትር</string>

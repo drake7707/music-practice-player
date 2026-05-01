@@ -52,6 +52,15 @@
     <string name="clear_text_end_icon_content_description">محو النص</string>
     <string name="error_a11y_label">خطأ: غير صالح</string>
     <string name="error_icon_content_description">خطأ</string>
+    <string name="exo_download_completed">اكتمل التنزيل</string>
+    <string name="exo_download_description">تنزيل</string>
+    <string name="exo_download_downloading">جارٍ التنزيل.</string>
+    <string name="exo_download_failed">تعذّر التنزيل</string>
+    <string name="exo_download_notification_channel_name">عمليات التنزيل</string>
+    <string name="exo_download_paused">تمّ إيقاف عمليات التنزيل مؤقتًا.</string>
+    <string name="exo_download_paused_for_network">عمليات التنزيل في انتظار الاتصال بالشبكة</string>
+    <string name="exo_download_paused_for_wifi">عمليات التنزيل في انتظار اتصال Wi-Fi.</string>
+    <string name="exo_download_removing">تجري إزالة المحتوى الذي تم تنزيله</string>
     <string name="exposed_dropdown_menu_content_description">عرض القائمة المنسدلة</string>
     <string name="icon_content_description">رمز مربع الحوار</string>
     <string name="item_view_role_description">علامة تبويب</string>

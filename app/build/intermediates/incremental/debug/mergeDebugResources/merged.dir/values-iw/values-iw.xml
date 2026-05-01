@@ -49,6 +49,15 @@
     <string name="clear_text_end_icon_content_description">מחיקת הטקסט</string>
     <string name="error_a11y_label">שגיאה: לא תקין</string>
     <string name="error_icon_content_description">שגיאה</string>
+    <string name="exo_download_completed">ההורדה הושלמה</string>
+    <string name="exo_download_description">הורדה</string>
+    <string name="exo_download_downloading">ההורדה מתבצעת</string>
+    <string name="exo_download_failed">ההורדה לא הושלמה</string>
+    <string name="exo_download_notification_channel_name">הורדות</string>
+    <string name="exo_download_paused">ההורדות הושהו</string>
+    <string name="exo_download_paused_for_network">ההורדות בהמתנה לרשת</string>
+    <string name="exo_download_paused_for_wifi">ההורדות בהמתנה ל-Wi-Fi</string>
+    <string name="exo_download_removing">מסיר הורדות</string>
     <string name="exposed_dropdown_menu_content_description">הצגת התפריט הנפתח</string>
     <string name="icon_content_description">סמל לתיבת דו-שיח</string>
     <string name="item_view_role_description">מקש Tab</string>

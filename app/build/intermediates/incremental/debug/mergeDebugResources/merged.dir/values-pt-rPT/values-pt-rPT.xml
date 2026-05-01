@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">Limpar texto</string>
     <string name="error_a11y_label">Erro: inválida</string>
     <string name="error_icon_content_description">Erro</string>
+    <string name="exo_download_completed">Transferência concluída</string>
+    <string name="exo_download_description">Transferir</string>
+    <string name="exo_download_downloading">A transferir…</string>
+    <string name="exo_download_failed">Falha na transferência</string>
+    <string name="exo_download_notification_channel_name">Transferências</string>
+    <string name="exo_download_paused">Transferências colocadas em pausa</string>
+    <string name="exo_download_paused_for_network">Transferências a aguardar uma rede</string>
+    <string name="exo_download_paused_for_wifi">Transferências a aguardar Wi-Fi</string>
+    <string name="exo_download_removing">A remover as transferências…</string>
     <string name="exposed_dropdown_menu_content_description">Mostrar menu pendente</string>
     <string name="icon_content_description">Ícone de caixa de diálogo</string>
     <string name="item_view_role_description">Separador</string>

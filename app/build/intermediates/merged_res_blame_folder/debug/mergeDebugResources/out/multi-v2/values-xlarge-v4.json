@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.musicpracticeplayer.app-mergeDebugResources-29:/values-xlarge-v4/values-xlarge-v4.xml",
+            "outputFile": "com.musicpracticeplayer.app-mergeDebugResources-30:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
                     "source": "/home/runner/.gradle/caches/transforms-4/2440aaa8ccec6df856e931f89a9dac16/transformed/appcompat-1.7.0/res/values-xlarge-v4/values-xlarge-v4.xml",

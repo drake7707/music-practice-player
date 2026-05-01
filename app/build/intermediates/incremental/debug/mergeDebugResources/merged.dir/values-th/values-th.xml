@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">ล้างข้อความ</string>
     <string name="error_a11y_label">ข้อผิดพลาด: ไม่ถูกต้อง</string>
     <string name="error_icon_content_description">ข้อผิดพลาด</string>
+    <string name="exo_download_completed">การดาวน์โหลดเสร็จสมบูรณ์</string>
+    <string name="exo_download_description">ดาวน์โหลด</string>
+    <string name="exo_download_downloading">กำลังดาวน์โหลด</string>
+    <string name="exo_download_failed">การดาวน์โหลดล้มเหลว</string>
+    <string name="exo_download_notification_channel_name">ดาวน์โหลด</string>
+    <string name="exo_download_paused">การดาวน์โหลดหยุดชั่วคราว</string>
+    <string name="exo_download_paused_for_network">กำลังรอเครือข่ายเพื่อดาวน์โหลด</string>
+    <string name="exo_download_paused_for_wifi">กำลังรอ Wi-Fi เพื่อดาวน์โหลด</string>
+    <string name="exo_download_removing">กำลังนำรายการที่ดาวน์โหลดออก</string>
     <string name="exposed_dropdown_menu_content_description">แสดงเมนูแบบเลื่อนลง</string>
     <string name="icon_content_description">ไอคอนกล่องโต้ตอบ</string>
     <string name="item_view_role_description">แท็บ</string>

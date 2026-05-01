@@ -50,6 +50,15 @@
     <string name="clear_text_end_icon_content_description">Ачысціць тэкст</string>
     <string name="error_a11y_label">Памылка: недапушчальнае значэнне</string>
     <string name="error_icon_content_description">Памылка</string>
+    <string name="exo_download_completed">Спампоўка завершана</string>
+    <string name="exo_download_description">Спампаваць</string>
+    <string name="exo_download_downloading">Спампоўваецца</string>
+    <string name="exo_download_failed">Збой спампоўкі</string>
+    <string name="exo_download_notification_channel_name">Спампоўкі</string>
+    <string name="exo_download_paused">Спампоўкі прыпынены</string>
+    <string name="exo_download_paused_for_network">Спампоўкі чакаюць падключэння да сеткі</string>
+    <string name="exo_download_paused_for_wifi">Спампоўкі чакаюць падключэння да Wi-Fi</string>
+    <string name="exo_download_removing">Выдаленне спамповак</string>
     <string name="exposed_dropdown_menu_content_description">Паказаць выпадное меню</string>
     <string name="icon_content_description">Значок дыялогавага акна</string>
     <string name="item_view_role_description">Укладка</string>

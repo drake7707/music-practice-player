@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">Matnni tozalash</string>
     <string name="error_a11y_label">Xato: yaroqsiz</string>
     <string name="error_icon_content_description">Xato</string>
+    <string name="exo_download_completed">Yuklab olindi</string>
+    <string name="exo_download_description">Yuklab olish</string>
+    <string name="exo_download_downloading">Yuklab olinmoqda</string>
+    <string name="exo_download_failed">Yuklab olinmadi</string>
+    <string name="exo_download_notification_channel_name">Yuklanmalar</string>
+    <string name="exo_download_paused">Yuklanmalar pauzada</string>
+    <string name="exo_download_paused_for_network">Yuklanmalar internetga ulanishni kutmoqda</string>
+    <string name="exo_download_paused_for_wifi">Yuklanmalar Wi-Fi aloqasini kutmoqda</string>
+    <string name="exo_download_removing">Yuklanmalar olib tashlanmoqda</string>
     <string name="exposed_dropdown_menu_content_description">Pastga ochiluvchi menyuni ochish</string>
     <string name="icon_content_description">Muloqot ikonkasi</string>
     <string name="item_view_role_description">Tab : Varaq</string>

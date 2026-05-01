@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">Metni temizle</string>
     <string name="error_a11y_label">Hata: geçersiz</string>
     <string name="error_icon_content_description">Hata</string>
+    <string name="exo_download_completed">İndirme işlemi tamamlandı</string>
+    <string name="exo_download_description">İndir</string>
+    <string name="exo_download_downloading">İndiriliyor</string>
+    <string name="exo_download_failed">İndirilemedi</string>
+    <string name="exo_download_notification_channel_name">İndirilenler</string>
+    <string name="exo_download_paused">İndirmeler duraklatıldı</string>
+    <string name="exo_download_paused_for_network">İndirmeler için ağ bekleniyor</string>
+    <string name="exo_download_paused_for_wifi">İndirmeler için kablosuz ağ bekleniyor</string>
+    <string name="exo_download_removing">İndirilenler kaldırılıyor</string>
     <string name="exposed_dropdown_menu_content_description">Açılır menüyü göster</string>
     <string name="icon_content_description">İletişim kutusu simgesi</string>
     <string name="item_view_role_description">Sekme</string>

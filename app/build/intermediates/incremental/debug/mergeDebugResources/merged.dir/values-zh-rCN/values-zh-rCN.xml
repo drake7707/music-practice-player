@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">清除文字</string>
     <string name="error_a11y_label">错误：无效</string>
     <string name="error_icon_content_description">错误</string>
+    <string name="exo_download_completed">下载完毕</string>
+    <string name="exo_download_description">下载</string>
+    <string name="exo_download_downloading">正在下载</string>
+    <string name="exo_download_failed">下载失败</string>
+    <string name="exo_download_notification_channel_name">下载内容</string>
+    <string name="exo_download_paused">下载已暂停</string>
+    <string name="exo_download_paused_for_network">正在等待连接到网络以进行下载</string>
+    <string name="exo_download_paused_for_wifi">正在等待连接到 WLAN 网络以进行下载</string>
+    <string name="exo_download_removing">正在移除下载内容</string>
     <string name="exposed_dropdown_menu_content_description">显示下拉菜单</string>
     <string name="icon_content_description">对话框图标</string>
     <string name="item_view_role_description">标签页</string>

@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">テキストを消去</string>
     <string name="error_a11y_label">エラー: 無効</string>
     <string name="error_icon_content_description">エラー</string>
+    <string name="exo_download_completed">ダウンロードが完了しました</string>
+    <string name="exo_download_description">ダウンロード</string>
+    <string name="exo_download_downloading">ダウンロードしています</string>
+    <string name="exo_download_failed">ダウンロードに失敗しました</string>
+    <string name="exo_download_notification_channel_name">ダウンロード</string>
+    <string name="exo_download_paused">ダウンロード一時停止</string>
+    <string name="exo_download_paused_for_network">ダウンロード停止: ネットワーク接続中</string>
+    <string name="exo_download_paused_for_wifi">ダウンロード停止: Wi-Fi 接続中</string>
+    <string name="exo_download_removing">ダウンロードを削除しています</string>
     <string name="exposed_dropdown_menu_content_description">プルダウン メニューを表示</string>
     <string name="icon_content_description">ダイアログ アイコン</string>
     <string name="item_view_role_description">タブ</string>

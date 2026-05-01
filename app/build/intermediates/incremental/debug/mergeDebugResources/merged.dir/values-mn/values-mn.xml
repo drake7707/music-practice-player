@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">Текстийг арилгах</string>
     <string name="error_a11y_label">Алдаа: хүчингүй</string>
     <string name="error_icon_content_description">Алдаа</string>
+    <string name="exo_download_completed">Татаж дууссан</string>
+    <string name="exo_download_description">Татах</string>
+    <string name="exo_download_downloading">Татаж байна</string>
+    <string name="exo_download_failed">Татаж чадсангүй</string>
+    <string name="exo_download_notification_channel_name">Татaлт</string>
+    <string name="exo_download_paused">Таталтуудыг түр зогсоосон</string>
+    <string name="exo_download_paused_for_network">Таталтууд сүлжээг хүлээж байна</string>
+    <string name="exo_download_paused_for_wifi">Таталтууд Wi-Fi-г хүлээж байна</string>
+    <string name="exo_download_removing">Татаж авсан файлыг хасаж байна</string>
     <string name="exposed_dropdown_menu_content_description">Доош унадаг цэсийг харуулах</string>
     <string name="icon_content_description">Харилцах цонхны дүрс тэмдэг</string>
     <string name="item_view_role_description">Таб</string>

@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">Kustuta tekst</string>
     <string name="error_a11y_label">Viga: sobimatu</string>
     <string name="error_icon_content_description">Viga</string>
+    <string name="exo_download_completed">Allalaadimine lõpetati</string>
+    <string name="exo_download_description">Allalaadimine</string>
+    <string name="exo_download_downloading">Allalaadimine</string>
+    <string name="exo_download_failed">Allalaadimine ebaõnnestus</string>
+    <string name="exo_download_notification_channel_name">Allalaadimised</string>
+    <string name="exo_download_paused">Allalaadimised peatati</string>
+    <string name="exo_download_paused_for_network">Allalaadimised on võrgu ootel</string>
+    <string name="exo_download_paused_for_wifi">Allalaadimised on WiFi-võrgu ootel</string>
+    <string name="exo_download_removing">Allalaadimiste eemaldamine</string>
     <string name="exposed_dropdown_menu_content_description">Kuva rippmenüü</string>
     <string name="icon_content_description">Dialoogi ikoon</string>
     <string name="item_view_role_description">Vaheleht</string>

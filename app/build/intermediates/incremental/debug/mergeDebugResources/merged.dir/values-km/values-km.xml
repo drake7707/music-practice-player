@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">សម្អាតអក្សរ</string>
     <string name="error_a11y_label">បញ្ហា៖ មិនត្រឹមត្រូវ</string>
     <string name="error_icon_content_description">បញ្ហា</string>
+    <string name="exo_download_completed">បាន​បញ្ចប់​ការទាញយក</string>
+    <string name="exo_download_description">ទាញយក</string>
+    <string name="exo_download_downloading">កំពុង​ទាញ​យក</string>
+    <string name="exo_download_failed">មិន​អាច​ទាញយក​បាន​ទេ</string>
+    <string name="exo_download_notification_channel_name">ទាញយក</string>
+    <string name="exo_download_paused">ការទាញយក​ត្រូវបានផ្អាក</string>
+    <string name="exo_download_paused_for_network">ការទាញយក​កំពុងរង់ចាំ​ការតភ្ជាប់បណ្ដាញ</string>
+    <string name="exo_download_paused_for_wifi">ការទាញយក​កំពុងរង់ចាំ​ការតភ្ជាប់ Wi-Fi</string>
+    <string name="exo_download_removing">កំពុង​លុប​ការទាញយក</string>
     <string name="exposed_dropdown_menu_content_description">បង្ហាញ​ម៉ឺនុយ​ធ្លាក់ចុះ</string>
     <string name="icon_content_description">រូប​ប្រអប់បញ្ចូល</string>
     <string name="item_view_role_description">ផ្ទាំង</string>

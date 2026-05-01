@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.musicpracticeplayer.app-mergeDebugResources-29:/values-en-rXC/values-en-rXC.xml",
+            "outputFile": "com.musicpracticeplayer.app-mergeDebugResources-30:/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
                     "source": "/home/runner/.gradle/caches/transforms-4/2440aaa8ccec6df856e931f89a9dac16/transformed/appcompat-1.7.0/res/values-en-rXC/values-en-rXC.xml",

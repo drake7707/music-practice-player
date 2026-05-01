@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">Διαγραφή κειμένου</string>
     <string name="error_a11y_label">Σφάλμα: μη έγκυρο</string>
     <string name="error_icon_content_description">Σφάλμα</string>
+    <string name="exo_download_completed">Η λήψη ολοκληρώθηκε</string>
+    <string name="exo_download_description">Λήψη</string>
+    <string name="exo_download_downloading">Λήψη</string>
+    <string name="exo_download_failed">Η λήψη απέτυχε</string>
+    <string name="exo_download_notification_channel_name">Λήψεις</string>
+    <string name="exo_download_paused">Οι λήψεις τέθηκαν σε παύση.</string>
+    <string name="exo_download_paused_for_network">Οι λήψεις είναι σε αναμονή για δίκτυο.</string>
+    <string name="exo_download_paused_for_wifi">Οι λήψεις είναι σε αναμονή για Wi-Fi.</string>
+    <string name="exo_download_removing">Κατάργηση λήψεων</string>
     <string name="exposed_dropdown_menu_content_description">Εμφάνιση αναπτυσσόμενου μενού</string>
     <string name="icon_content_description">Εικονίδιο παραθύρου διαλόγου</string>
     <string name="item_view_role_description">Καρτέλα</string>

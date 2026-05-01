@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">টেক্সট মুছুন</string>
     <string name="error_a11y_label">সমস্যা: সঠিক নয়</string>
     <string name="error_icon_content_description">সমস্যা</string>
+    <string name="exo_download_completed">ডাউনলোড হয়ে গেছে</string>
+    <string name="exo_download_description">ডাউনলোড করুন</string>
+    <string name="exo_download_downloading">ডাউনলোড হচ্ছে</string>
+    <string name="exo_download_failed">ডাউনলোড করা যায়নি</string>
+    <string name="exo_download_notification_channel_name">ডাউনলোড</string>
+    <string name="exo_download_paused">ডাউনলোড পজ করা আছে</string>
+    <string name="exo_download_paused_for_network">ডাউনলোড চালু করার জন্য নেটওয়ার্কের সাথে কানেক্ট হওয়ার অপেক্ষা করা হচ্ছে</string>
+    <string name="exo_download_paused_for_wifi">ডাউনলোড চালু করার জন্য ওয়াই-ফাইয়ের সাথে কানেক্ট হওয়ার অপেক্ষা করা হচ্ছে</string>
+    <string name="exo_download_removing">ডাউনলোড করা কন্টেন্ট সরিয়ে দেওয়া হচ্ছে</string>
     <string name="exposed_dropdown_menu_content_description">ড্রপ-ডাউন মেনু দেখুন</string>
     <string name="icon_content_description">ডায়ালগ আইকন</string>
     <string name="item_view_role_description">ট্যাব</string>

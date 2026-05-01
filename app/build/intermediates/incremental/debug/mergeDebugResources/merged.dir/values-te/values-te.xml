@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">రాసినదాన్ని తీసివేయండి</string>
     <string name="error_a11y_label">ఎర్రర్: చెల్లదు</string>
     <string name="error_icon_content_description">ఎర్రర్</string>
+    <string name="exo_download_completed">డౌన్‌లోడ్ పూర్తయింది</string>
+    <string name="exo_download_description">డౌన్‌లోడ్ చేయి</string>
+    <string name="exo_download_downloading">డౌన్‌లోడ్ చేస్తోంది</string>
+    <string name="exo_download_failed">డౌన్‌లోడ్ విఫలమైంది</string>
+    <string name="exo_download_notification_channel_name">డౌన్‌లోడ్‌లు</string>
+    <string name="exo_download_paused">డౌన్‌లోడ్‌లు పాజ్ చేయబడ్డాయి</string>
+    <string name="exo_download_paused_for_network">డౌన్‌లోడ్స్ నెట్‌వర్క్ కోసం చూస్తున్నాయి</string>
+    <string name="exo_download_paused_for_wifi">డౌన్‌లోడ్‌లు WiFi కోసం చూస్తున్నాయి</string>
+    <string name="exo_download_removing">డౌన్‌లోడ్‌లను తీసివేస్తోంది</string>
     <string name="exposed_dropdown_menu_content_description">డ్రాప్‌డౌన్ మెనూను చూపు</string>
     <string name="icon_content_description">డైలాగ్ చిహ్నం</string>
     <string name="item_view_role_description">ట్యాబ్</string>

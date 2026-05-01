@@ -49,6 +49,15 @@
     <string name="clear_text_end_icon_content_description">Notīrīt tekstu</string>
     <string name="error_a11y_label">Kļūda: nederīga</string>
     <string name="error_icon_content_description">Kļūda</string>
+    <string name="exo_download_completed">Lejupielāde ir pabeigta</string>
+    <string name="exo_download_description">Lejupielādēt</string>
+    <string name="exo_download_downloading">Notiek lejupielāde</string>
+    <string name="exo_download_failed">Lejupielāde neizdevās</string>
+    <string name="exo_download_notification_channel_name">Lejupielādes</string>
+    <string name="exo_download_paused">Lejupielādes ir pārtrauktas.</string>
+    <string name="exo_download_paused_for_network">Lejupielādes gaida savienojumu ar tīklu.</string>
+    <string name="exo_download_paused_for_wifi">Lejupielādes gaida savienojumu ar Wi-Fi.</string>
+    <string name="exo_download_removing">Notiek lejupielāžu noņemšana</string>
     <string name="exposed_dropdown_menu_content_description">Rādīt nolaižamo izvēlni</string>
     <string name="icon_content_description">Dialoglodziņa ikona</string>
     <string name="item_view_role_description">Cilne</string>

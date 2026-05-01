@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">텍스트 삭제</string>
     <string name="error_a11y_label">오류: 잘못됨</string>
     <string name="error_icon_content_description">오류</string>
+    <string name="exo_download_completed">다운로드 완료</string>
+    <string name="exo_download_description">다운로드</string>
+    <string name="exo_download_downloading">다운로드 중</string>
+    <string name="exo_download_failed">다운로드 실패</string>
+    <string name="exo_download_notification_channel_name">다운로드</string>
+    <string name="exo_download_paused">다운로드 일시중지됨</string>
+    <string name="exo_download_paused_for_network">다운로드를 위해 네트워크 연결 대기 중</string>
+    <string name="exo_download_paused_for_wifi">다운로드를 위해 Wi-Fi 연결 대기 중</string>
+    <string name="exo_download_removing">다운로드 항목 삭제 중</string>
     <string name="exposed_dropdown_menu_content_description">드롭다운 메뉴 표시</string>
     <string name="icon_content_description">대화상자 아이콘</string>
     <string name="item_view_role_description">탭</string>

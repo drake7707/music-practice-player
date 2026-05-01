@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">Ջնջել տեքստը</string>
     <string name="error_a11y_label">Սխալ՝ անվավեր է</string>
     <string name="error_icon_content_description">Սխալ</string>
+    <string name="exo_download_completed">Ներբեռնումն ավարտվեց</string>
+    <string name="exo_download_description">Ներբեռնել</string>
+    <string name="exo_download_downloading">Ներբեռնում</string>
+    <string name="exo_download_failed">Չհաջողվեց ներբեռնել</string>
+    <string name="exo_download_notification_channel_name">Ներբեռնումներ</string>
+    <string name="exo_download_paused">Ներբեռնումները դադարեցված են</string>
+    <string name="exo_download_paused_for_network">Ցանցի որոնում</string>
+    <string name="exo_download_paused_for_wifi">Wi-Fi ցանցի որոնում</string>
+    <string name="exo_download_removing">Ներբեռնումները հեռացվում են</string>
     <string name="exposed_dropdown_menu_content_description">Ցույց տալ իջնող ընտրացանկը</string>
     <string name="icon_content_description">Երկխոսության պատուհանի պատկերակ</string>
     <string name="item_view_role_description">Ներդիր</string>

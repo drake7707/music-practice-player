@@ -49,6 +49,15 @@
     <string name="clear_text_end_icon_content_description">Brisanje teksta</string>
     <string name="error_a11y_label">Pogreška: nije važeće</string>
     <string name="error_icon_content_description">Pogreška</string>
+    <string name="exo_download_completed">Preuzimanje je dovršeno</string>
+    <string name="exo_download_description">Preuzmi</string>
+    <string name="exo_download_downloading">Preuzimanje</string>
+    <string name="exo_download_failed">Preuzimanje nije uspjelo</string>
+    <string name="exo_download_notification_channel_name">Preuzimanja</string>
+    <string name="exo_download_paused">Preuzimanja su pauzirana</string>
+    <string name="exo_download_paused_for_network">Preuzimanja čekaju mrežu</string>
+    <string name="exo_download_paused_for_wifi">Preuzimanja čekaju Wi-Fi</string>
+    <string name="exo_download_removing">Uklanjanje preuzimanja</string>
     <string name="exposed_dropdown_menu_content_description">Prikaži padajući izbornik</string>
     <string name="icon_content_description">Ikona dijaloga</string>
     <string name="item_view_role_description">Kartica</string>

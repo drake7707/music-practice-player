@@ -48,6 +48,15 @@
     <string name="clear_text_end_icon_content_description">Borra texto</string>
     <string name="error_a11y_label">Erro: Non válida</string>
     <string name="error_icon_content_description">Produciuse un erro</string>
+    <string name="exo_download_completed">Completouse a descarga</string>
+    <string name="exo_download_description">Descargar</string>
+    <string name="exo_download_downloading">Descargando</string>
+    <string name="exo_download_failed">Produciuse un erro na descarga</string>
+    <string name="exo_download_notification_channel_name">Descargas</string>
+    <string name="exo_download_paused">As descargas están en pausa</string>
+    <string name="exo_download_paused_for_network">As descargas están agardando pola rede</string>
+    <string name="exo_download_paused_for_wifi">As descargas están agardando pola wifi</string>
+    <string name="exo_download_removing">Quitando descargas</string>
     <string name="exposed_dropdown_menu_content_description">Mostra o menú despregable</string>
     <string name="icon_content_description">Icona de cadro de diálogo</string>
     <string name="item_view_role_description">Pestana</string>
