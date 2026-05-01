@@ -101,6 +101,11 @@ public class PlaybackController {
 
         try {
             exoPlayer = new ExoPlayer.Builder(context)
+                    .setAudioOffloadPreferences(
+                            new ExoPlayer.AudioOffloadPreferences.Builder()
+                                    .setAudioOffloadMode(ExoPlayer.AudioOffloadPreferences.AUDIO_OFFLOAD_MODE_DISABLED)
+                                    .build()
+                    )
                     .build();
             exoPlayer.setAudioAttributes(
                     new AudioAttributes.Builder()
