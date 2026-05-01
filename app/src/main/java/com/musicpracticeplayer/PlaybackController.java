@@ -46,12 +46,19 @@ public class PlaybackController {
     /** True while a seekTo() call is in progress (seek completes asynchronously). */
     private volatile boolean isSeeking = false;
     /**
-     * The position (ms) that was last requested via seekTo(), or -1 when no seek is pending.
-     * Used to display a stable position in the UI while the async seek is in flight, avoiding
-     * the visible "jump backwards" caused by getCurrentPosition() returning a stale or
-     * keyframe-snapped value mid-seek.
+     * Monotonically-advancing position tracker. Serves two purposes:
+     * <ol>
+     *   <li>While a seek is in-flight ({@link #isSeeking} is true) it holds the exact target
+     *       that was passed to {@link #seekTo}, so every caller gets a stable value instead of
+     *       whatever the decoder happens to report mid-seek.</li>
+     *   <li>During normal playback it is updated from {@code getCurrentPosition()} but is
+     *       only ever allowed to advance forward. This guards against devices (e.g. LineageOS 18)
+     *       where {@code getCurrentPosition()} occasionally jumps backwards by several seconds,
+     *       which would otherwise prevent the loop-end boundary from ever being detected.</li>
+     * </ol>
+     * Reset to 0 on file release and to the seek target on every explicit seek.
      */
-    private volatile int pendingSeekPositionMs = -1;
+    private volatile int lastPositionMs = 0;
 
     private float playbackSpeed = SPEED_DEFAULT;
 
@@ -110,7 +117,7 @@ public class PlaybackController {
             mediaPlayer.setDataSource(context, uri);
             mediaPlayer.setOnSeekCompleteListener(mp -> {
                 isSeeking = false;
-                pendingSeekPositionMs = -1;
+                // lastPositionMs stays at the seek target; normal playback will advance it from there
             });
             mediaPlayer.setOnPreparedListener(mp -> {
                 applyPlaybackSpeed();
@@ -196,8 +203,7 @@ public class PlaybackController {
      */
     public void seekForward(int deltaMs) {
         if (mediaPlayer == null) return;
-        int newPos = Math.min(mediaPlayer.getCurrentPosition() + deltaMs,
-                mediaPlayer.getDuration());
+        int newPos = Math.min(getEffectivePositionMs() + deltaMs, mediaPlayer.getDuration());
         seekTo(newPos);
     }
 
@@ -207,7 +213,7 @@ public class PlaybackController {
      */
     public void seekBackward(int deltaMs) {
         if (mediaPlayer == null) return;
-        int newPos = Math.max(mediaPlayer.getCurrentPosition() - deltaMs, 0);
+        int newPos = Math.max(getEffectivePositionMs() - deltaMs, 0);
         seekTo(newPos);
     }
 
@@ -216,7 +222,7 @@ public class PlaybackController {
         if (mediaPlayer == null) return;
         try {
             isSeeking = true;
-            pendingSeekPositionMs = positionMs;
+            lastPositionMs = positionMs;
             // API 26+ supports SEEK_CLOSEST which seeks to the exact position rather than
             // snapping backwards to the nearest sync/keyframe (SEEK_PREVIOUS_SYNC, the default
             // used by the old single-argument seekTo). On some devices/ROMs (e.g. LineageOS 18)
@@ -232,7 +238,6 @@ public class PlaybackController {
             }
         } catch (IllegalStateException e) {
             isSeeking = false;
-            pendingSeekPositionMs = -1;
             Log.e(TAG, "Cannot seek", e);
         }
     }
@@ -253,7 +258,7 @@ public class PlaybackController {
     /** Sets the loop start point to the current playback position. */
     public void setLoopStart() {
         if (mediaPlayer == null) return;
-        loopStartMs = mediaPlayer.getCurrentPosition();
+        loopStartMs = getEffectivePositionMs();
         // Ensure start never exceeds end (when end was already set)
         if (loopEndMs > 0 && loopStartMs >= loopEndMs) {
             loopEndMs = mediaPlayer.getDuration();
@@ -264,7 +269,7 @@ public class PlaybackController {
     /** Sets the loop end point to the current playback position and activates the loop. */
     public void setLoopEnd() {
         if (mediaPlayer == null) return;
-        int currentPos = mediaPlayer.getCurrentPosition();
+        int currentPos = getEffectivePositionMs();
         // End must be after start
         if (currentPos <= loopStartMs) {
             Log.w(TAG, "Loop end must be after loop start");
@@ -343,7 +348,7 @@ public class PlaybackController {
     public int getCurrentPositionMs() {
         if (mediaPlayer == null) return 0;
         try {
-            return mediaPlayer.getCurrentPosition();
+            return getEffectivePositionMs();
         } catch (IllegalStateException e) {
             return 0;
         }
@@ -393,13 +398,7 @@ public class PlaybackController {
     private void updatePosition() {
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             if (callbacks != null) {
-                // While a seek is in flight, getCurrentPosition() may return a stale or
-                // keyframe-snapped value. Report the requested seek position instead so the
-                // seekbar does not jump around visually.
-                int positionMs = (isSeeking && pendingSeekPositionMs >= 0)
-                        ? pendingSeekPositionMs
-                        : mediaPlayer.getCurrentPosition();
-                callbacks.onPositionChanged(positionMs);
+                callbacks.onPositionChanged(getEffectivePositionMs());
             }
             mainHandler.postDelayed(positionUpdateRunnable, POSITION_UPDATE_INTERVAL_MS);
         }
@@ -407,7 +406,7 @@ public class PlaybackController {
 
     private void checkLoopBoundary() {
         if (mediaPlayer != null && mediaPlayer.isPlaying() && isLoopEnabled && !isSeeking) {
-            int currentPos = mediaPlayer.getCurrentPosition();
+            int currentPos = getEffectivePositionMs();
             if (loopEndMs > loopStartMs && currentPos >= loopEndMs) {
                 seekTo(loopStartMs);
             }
@@ -415,6 +414,25 @@ public class PlaybackController {
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             mainHandler.postDelayed(loopCheckRunnable, LOOP_CHECK_INTERVAL_MS);
         }
+    }
+
+    /**
+     * Returns the current playback position in a way that is stable across device quirks.
+     *
+     * <p>While a seek is in-flight, returns the requested seek target so callers don't see a
+     * stale or keyframe-snapped value from the decoder. During normal playback, advances
+     * {@link #lastPositionMs} from {@code getCurrentPosition()} but only ever forwards —
+     * this suppresses the spurious backwards jumps that some devices (e.g. LineageOS 18)
+     * produce, which would otherwise prevent the loop-end boundary from being detected.
+     */
+    private int getEffectivePositionMs() {
+        if (isSeeking) return lastPositionMs;
+        if (mediaPlayer == null) return lastPositionMs;
+        int raw = mediaPlayer.getCurrentPosition();
+        if (raw > lastPositionMs) {
+            lastPositionMs = raw;
+        }
+        return lastPositionMs;
     }
 
     // -------------------------------------------------------------------------
@@ -438,6 +456,6 @@ public class PlaybackController {
             mediaPlayer = null;
         }
         isSeeking = false;
-        pendingSeekPositionMs = -1;
+        lastPositionMs = 0;
     }
 }
