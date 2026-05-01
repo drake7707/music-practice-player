@@ -46,6 +46,14 @@ public class PlaybackController {
     private int loopStartMs = 0;
     private int loopEndMs = 0;
 
+    /**
+     * Guards the first-time preparation logic inside {@code onPlaybackStateChanged}.
+     * ExoPlayer transitions through {@code STATE_BUFFERING → STATE_READY} after every seek,
+     * not only after the initial {@link #openFile} prepare call.  Without this flag every
+     * seek would reset the seekbar to 0, clear the loop state, and call {@link Callbacks#onPrepared}.
+     */
+    private boolean hasBeenPrepared = false;
+
     private float playbackSpeed = SPEED_DEFAULT;
 
     private Callbacks callbacks;
@@ -104,7 +112,8 @@ public class PlaybackController {
             exoPlayer.addListener(new Player.Listener() {
                 @Override
                 public void onPlaybackStateChanged(int state) {
-                    if (state == Player.STATE_READY) {
+                    if (state == Player.STATE_READY && !hasBeenPrepared) {
+                        hasBeenPrepared = true;
                         int duration = (int) exoPlayer.getDuration();
                         loopStartMs = 0;
                         loopEndMs = duration;
@@ -378,5 +387,6 @@ public class PlaybackController {
             exoPlayer.release();
             exoPlayer = null;
         }
+        hasBeenPrepared = false;
     }
 }
