@@ -42,6 +42,9 @@ public class PlaybackController {
     private int loopStartMs = 0;
     private int loopEndMs = 0;
 
+    /** True while a seekTo() call is in progress (seek completes asynchronously). */
+    private boolean isSeeking = false;
+
     private float playbackSpeed = SPEED_DEFAULT;
 
     private Callbacks callbacks;
@@ -97,6 +100,9 @@ public class PlaybackController {
                             .build()
             );
             mediaPlayer.setDataSource(context, uri);
+            mediaPlayer.setOnSeekCompleteListener(mp -> {
+                isSeeking = false;
+            });
             mediaPlayer.setOnPreparedListener(mp -> {
                 applyPlaybackSpeed();
                 int duration = mp.getDuration();
@@ -200,11 +206,13 @@ public class PlaybackController {
     public void seekTo(int positionMs) {
         if (mediaPlayer == null) return;
         try {
+            isSeeking = true;
             mediaPlayer.seekTo(positionMs);
             if (callbacks != null) {
                 callbacks.onPositionChanged(positionMs);
             }
         } catch (IllegalStateException e) {
+            isSeeking = false;
             Log.e(TAG, "Cannot seek", e);
         }
     }
@@ -372,7 +380,7 @@ public class PlaybackController {
     }
 
     private void checkLoopBoundary() {
-        if (mediaPlayer != null && mediaPlayer.isPlaying() && isLoopEnabled) {
+        if (mediaPlayer != null && mediaPlayer.isPlaying() && isLoopEnabled && !isSeeking) {
             int currentPos = mediaPlayer.getCurrentPosition();
             if (loopEndMs > loopStartMs && currentPos >= loopEndMs) {
                 seekTo(loopStartMs);
@@ -403,5 +411,6 @@ public class PlaybackController {
             mediaPlayer.release();
             mediaPlayer = null;
         }
+        isSeeking = false;
     }
 }

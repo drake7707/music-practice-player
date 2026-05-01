@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#2196F3</color>
+    <color name="accent_dark">#1565C0</color>
+    <color name="background">#121212</color>
+    <color name="loop_button_active">#1565C0</color>
+    <color name="loop_button_inactive">#2C2C2C</color>
+    <color name="loop_region_fill">#2196F3</color>
+    <color name="loop_tick">#64B5F6</color>
+    <color name="on_accent">#FFFFFF</color>
+    <color name="status_bar">#0D0D0D</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="surface_variant">#2C2C2C</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AAAAAA</color>
+    <string name="app_name">Music Practice Player</string>
+    <string name="error_load_file">Could not open the audio file. Please try another file.</string>
+    <string name="keyboard_hints">Space: Play/Pause · PgUp/PgDn: Seek · S: Loop Start · E: Loop End · L: Toggle Loop · +/−: Speed · R: Return</string>
+    <string name="loop_end_set">Loop end set and activated</string>
+    <string name="loop_section_label">LOOP</string>
+    <string name="loop_start_set">Loop start set</string>
+    <string name="minus">−</string>
+    <string name="no_file_loaded">No file loaded</string>
+    <string name="open_file">Open File</string>
+    <string name="pause">Pause</string>
+    <string name="permission_denied">Storage permission is required to open audio files.</string>
+    <string name="play">Play</string>
+    <string name="plus">+</string>
+    <string name="return_to_start">Return to Start</string>
+    <string name="seek_backward">Seek Back 10s</string>
+    <string name="seek_forward">Seek Forward 10s</string>
+    <string name="set_loop_end">Set End [E]</string>
+    <string name="set_loop_start">Set Start [S]</string>
+    <string name="speed_label">SPEED</string>
+    <string name="toggle_loop">Loop [L]</string>
+    <style name="Theme.MusicPracticePlayer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/accent_dark</item>
+        <item name="colorOnPrimary">@color/on_accent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="android:navigationBarColor">@color/background</item>
+    </style>
+</resources>
